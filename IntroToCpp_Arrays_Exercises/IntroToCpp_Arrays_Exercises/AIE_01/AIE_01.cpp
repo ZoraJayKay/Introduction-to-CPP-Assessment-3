@@ -1,5 +1,6 @@
 
 #include <iostream>
+using namespace std;
 
 int main(int argc, char** argv)
 {
@@ -14,6 +15,13 @@ int main(int argc, char** argv)
 	// Task1: Write your Code here
 	// ------------------------------------------------------------------------
 
+	// ZORA: create an object of type 'size_t' which will record the size of the array by calculating how many items are in the array, by: dividing the entire memory allocation of the array by the memory allocation of one element of the array.
+	size_t arraySize = sizeof(numbers) / sizeof(numbers[0]);
+
+	for (size_t i = 0; i < arraySize; i++) 
+	{
+		cout << numbers[i] << endl;
+	}
 
 	// ------------------------------------------------------------------------
 
@@ -27,6 +35,10 @@ int main(int argc, char** argv)
 	// Task 2: Write your Code here
 	// ------------------------------------------------------------------------
 
+	for (size_t i = 0; i < arraySize; i++)
+	{
+		cout << numbers[(arraySize-1-i)] << endl;
+	}
 
 	// ------------------------------------------------------------------------
 
