@@ -30,6 +30,7 @@ int main(int argc, char** argv)
 int MinValue(const int* arr, int count)
 {
 	// TODO: loop through the array, return the smallest value
+
 	return 0;
 }
 

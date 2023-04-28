@@ -16,12 +16,19 @@ int main(int argc, char** argv)
 	// ------------------------------------------------------------------------
 
 	// ZORA: create an object of type 'size_t' which will record the size of the array by calculating how many items are in the array, by: dividing the entire memory allocation of the array by the memory allocation of one element of the array.
+	
+	// option 1
 	size_t arraySize = sizeof(numbers) / sizeof(numbers[0]);
-
 	for (size_t i = 0; i < arraySize; i++) 
 	{
 		cout << numbers[i] << endl;
 	}
+
+	//// option 2
+	//for (int val: numbers) 
+	//{
+	//	cout << val << endl;
+	//}
 
 	// ------------------------------------------------------------------------
 
