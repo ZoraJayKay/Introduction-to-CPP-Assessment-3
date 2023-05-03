@@ -21,7 +21,7 @@ int main(int argc, char** argv)
 }
 
 bool IsArraySorted(const int* arr, int count)
-{	
+{
 	for (int i = 0; i < count - 1; i++)
 	{
 		if (arr[i] > arr[i + 1])
@@ -37,4 +37,17 @@ void SortArray(int* arr, int count)
 	// TODO: 
 	// modify the values in the array so that when this method returns
 	// all values are sorted in ascending order
+
+	for (int i = 0; i < count - 1; i++)		// do as many passes as there are elements (i passes)
+	{
+		for (int j = i + 1; j < count; j++) // for each pass, check every element for a swap, once (i passes * j passes)
+		{
+			if (arr[i] > arr[j])
+			{
+				int temp = arr[j];
+				arr[j] = arr[i];
+				arr[i] = temp;
+			}
+		}		
+	}
 }

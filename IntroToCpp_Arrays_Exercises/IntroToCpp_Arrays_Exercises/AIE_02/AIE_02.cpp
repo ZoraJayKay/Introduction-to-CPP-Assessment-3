@@ -28,21 +28,48 @@ int main(int argc, char** argv)
 
 
 int MinValue(const int* arr, int count)
-{
+{	
 	// TODO: loop through the array, return the smallest value
+	int temp = arr[0];	// arbitrarily set the temporary comparison value to the first element in the array as a starting point.
 
-	return 0;
+	for (int i = 0; i < count; i++) 
+	{
+		if (temp > arr[i])
+		{
+			temp = arr[i];
+		}
+	}
+	return temp;
 }
 
 int MaxValue(const int* arr, int count)
 {
 	// TODO: loop through the array, return the largest value
-	return 0;
+	int temp = arr[0];	// arbitrarily set the temporary comparison value to the first element in the array as a starting point.
+
+	for (int i = 0; i < count; i++)
+	{
+		if (temp < arr[i])
+		{
+			temp = arr[i];
+		}
+	}
+	return temp;
 }
 
 int CountOccurrencesOfValue(const int* arr, int count, int search)
 {
 	// TODO: loop through the array, return the number of times the search value occurs 
-	return 0;
+	int temp = search;	// set the value I'm looking for to the parameter given.
+	int counter = 0;	// a variable for counting the number of times the parameter given is found.
+
+	for (int i = 0; i < count; i++)
+	{
+		if (arr[i] == search)
+		{
+			counter++;
+		}
+	}
+	return counter;
 }
 
